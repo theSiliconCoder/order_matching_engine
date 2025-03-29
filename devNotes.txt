@@ -1,0 +1,23 @@
+// cpp revision: done
+
+next: 2h/4
+
+#design: 20m
+// design overall program
+// design client/engine protocol
+// design matching order engine
+// design client code 
+// design evaluation code
+
+#impl: 1h+ (15-25mins max)
+// implement protocol
+// implement matching engine 
+// implement client 
+// implement periodic evaluation code // monitors the orderbook for incosistencies.
+
+#deploy: 20m
+// init github repo
+// init local and push
+// share with jeff
+// notify recruiter 
+
