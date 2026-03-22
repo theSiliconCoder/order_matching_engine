@@ -160,13 +160,15 @@ void MatchingEngine::displayPendingOrders() {
 }
 
 // ENGINE CALLBACKS
-void MatchingEngine::placeOrder(Order& order) {
+inline void MatchingEngine::placeOrder(Order& order) {
     std::lock_guard<std::mutex> lock(mtx);
     pendingOrdersList.push_back(order);
     pendingOrdersMap[order.id] = --pendingOrdersList.end();
     orderQueueCondition.notify_one();
     std::cout << "\n[SUCCESS] Order " << order.id << " added to pending Orders\n";
     order.src->orderPlaced(order);
+
+    // std::transform(pendingOrdersList.begin(), pendingOrdersList.end(), NULL, [](const Order& order){order.amount * 2;});
 }
 
 void MatchingEngine::cancelOrder(int orderId) {
@@ -184,4 +186,10 @@ void MatchingEngine::cancelOrder(int orderId) {
 
 void MatchingEngine::subscribe(TradingClient& client) {
     clientList.push_back(client);
+}
+
+void MatchingEngine::faultOrder()
+{
+    // orderBookMutex.lock();
+    // orderBookMutex.unlock();
 }

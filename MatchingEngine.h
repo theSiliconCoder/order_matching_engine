@@ -8,6 +8,7 @@
 #include <unordered_map>
 #include <list>
 #include <map>
+#include <algorithm>
 
 #include "TradingClient.h"
 #include "Order.h"
@@ -43,4 +44,5 @@ public:
     void placeOrder(Order& order);
     void cancelOrder(int orderId);
     void subscribe(TradingClient& client);
+    void faultOrder();
 };

@@ -6,7 +6,7 @@ CC = g++
 CXXFLAGS = -std=c++17
 
 # Targets and dependencies
-SOURCE = main.cpp Order.cpp TradingClient.cpp MatchingEngine.cpp -lpthread
+SOURCE = $(wildcard *.cpp) -lpthread
 TARGET = test
 
 build: $(SOURCE)
