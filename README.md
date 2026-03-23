@@ -127,7 +127,7 @@ int main() {
 
 ## Market-Making & Quant Focus
 
-This project demonstrates core **market-making concepts** relevant to Bayse Markets:
+This project demonstrates core **market-making concepts**:
 
 1. **Deterministic Price-Time Matching** – ensures fair and predictable execution
 2. **Liquidity Provision Simulation** – clients submit both buy/sell orders
