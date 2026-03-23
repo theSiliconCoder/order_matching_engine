@@ -1,4 +1,4 @@
-# C++ Deterministic Matching Engine & Simulated Trading Clients
+# C++ Deterministic Order Matching Engine & Simulated Trading Clients
 
 ## Overview
 
